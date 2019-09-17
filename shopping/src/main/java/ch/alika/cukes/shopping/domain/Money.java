@@ -15,7 +15,7 @@ public class Money {
         return new Money(dollars, cents);
     }
 
-    public Money() {
+    Money() {
         this(0,0);
     }
 
@@ -24,7 +24,7 @@ public class Money {
         this.cents = cents % 100;
     }
 
-    public Money multipliedBy(int quantity) {
+    Money multipliedBy(int quantity) {
         int totalCents = (getValueInCents()) * quantity;
         return new Money(0, totalCents);
     }
