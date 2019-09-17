@@ -14,8 +14,12 @@ import static org.hamcrest.MatcherAssert.*;
 
 public class ShoppingSteps {
 
-    final private ShoppingHelper helper = new ShoppingHelper();
-    
+    final private ShoppingHelper helper;
+
+    public ShoppingSteps(ShoppingHelper helper) {
+        this.helper = helper;
+    }
+
     @Given("the price of a {string} is {money}")
     public void thePriceOfAIsCents(@SuppressWarnings("unused") String itemName, Money itemPrice) {
         getPriceList().putPrice(itemPrice);
