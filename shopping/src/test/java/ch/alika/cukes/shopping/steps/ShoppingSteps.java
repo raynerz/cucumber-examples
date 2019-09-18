@@ -21,8 +21,8 @@ public class ShoppingSteps {
     }
 
     @Given("the price of a {string} is {money}")
-    public void thePriceOfAIsCents(@SuppressWarnings("unused") String itemName, Money itemPrice) {
-        getPriceList().putPrice(itemPrice);
+    public void thePriceOfAIsCents(String itemName, Money itemPrice) {
+        getPriceList().putPrice(itemName,itemPrice);
     }
 
     @When("I checkout with {int} {string}(s)")
