@@ -36,6 +36,7 @@ class MoneyTest {
     void whereConstructedWithGreaterThan100Cents() {
         assertThat(new Money(2,160), is($3_60));
     }
+    
     @Test
     void whereSubtracted() {
         assertThat($2_80.minus($1_60),is($1_20));
