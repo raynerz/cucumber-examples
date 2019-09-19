@@ -19,7 +19,7 @@ public class ShoppingCartSteps {
     }
 
     @When("I add {int} {string}(s) to my cart")
-    public void iCheckoutWithS(Integer quantity, String itemName) {
+    public void iAddItemToCart(Integer quantity, String itemName) {
         getCart().add(itemName,quantity);
     }
 

@@ -33,13 +33,17 @@ class MoneyTest {
     }
 
     @Test
+    void whereConstructedWithGreaterThan100Cents() {
+        assertThat(new Money(2,160), is($3_60));
+    }
+    @Test
     void whereSubtracted() {
         assertThat($2_80.minus($1_60),is($1_20));
         assertThat($3_60.minus($1_80),is($1_80));
     }
 
     @Test
-    void whereMultipliedByIntegers() {
+    void whereMultipliedByInteger() {
         assertThat($1_20.multipliedBy(7),is($8_40));
         assertThat($1_20.multipliedBy(3),is($3_60));
     }

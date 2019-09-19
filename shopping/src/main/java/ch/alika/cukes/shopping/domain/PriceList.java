@@ -15,6 +15,6 @@ public class PriceList {
         if (result == null)
             throw new PriceNotFoundException(productName);
 
-        return prices.get(productName);
+        return result;
     }
 }

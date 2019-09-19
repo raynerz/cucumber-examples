@@ -9,29 +9,27 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class PriceListTest {
 
-    private static final Money BANANA_PRICE = new Money(1, 25);
     private static final String BANANA = "banana";
     private static final String ORANGE = "orange";
+    private static final Money BANANA_PRICE = new Money(1, 25);
     private static final Money ORANGE_PRICE = new Money(1, 45);
     private PriceList priceList;
 
     @BeforeEach
     void setup() {
         this.priceList = new PriceList();
+        priceList.putPrice(BANANA, BANANA_PRICE);
+        priceList.putPrice(ORANGE, ORANGE_PRICE);
     }
 
     @Test
     void wherePricesAreRetrieved() {
-        priceList.putPrice(BANANA, BANANA_PRICE);
-        priceList.putPrice(ORANGE, ORANGE_PRICE);
         assertThat(priceList.getPrice(BANANA),is(BANANA_PRICE));
         assertThat(priceList.getPrice(ORANGE),is(ORANGE_PRICE));
     }
 
     @Test
-    void wherePriceNotFound() {
-        assertThrows(PriceNotFoundException.class, () -> {
-            priceList.getPrice("Nonexistent_product");
-        });
+    void wherePriceDoesNotExist() {
+        assertThrows(PriceNotFoundException.class, () -> priceList.getPrice("Nonexistent_product"));
     }
 }
