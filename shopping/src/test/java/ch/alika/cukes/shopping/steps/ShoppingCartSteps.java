@@ -1,7 +1,7 @@
 package ch.alika.cukes.shopping.steps;
 
+import ch.alika.cukes.shopping.domain.IShoppingCart;
 import ch.alika.cukes.shopping.domain.Money;
-import ch.alika.cukes.shopping.domain.ShoppingCart;
 import ch.alika.cukes.shopping.support.ShoppingHelper;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -28,7 +28,7 @@ public class ShoppingCartSteps {
         assertThat(getCart().getTotalPrice(),is(totalPrice));
     }
 
-    private ShoppingCart getCart() {
+    private IShoppingCart getCart() {
         return helper.getCart();
     }
 

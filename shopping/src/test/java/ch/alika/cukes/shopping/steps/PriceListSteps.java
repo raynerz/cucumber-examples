@@ -1,5 +1,6 @@
 package ch.alika.cukes.shopping.steps;
 
+import ch.alika.cukes.shopping.domain.IPriceList;
 import ch.alika.cukes.shopping.domain.Money;
 import ch.alika.cukes.shopping.domain.PriceList;
 import ch.alika.cukes.shopping.support.ShoppingHelper;
@@ -19,7 +20,7 @@ public class PriceListSteps {
         getPriceList().putPrice(itemName,itemPrice);
     }
 
-    private  PriceList getPriceList() {
+    private IPriceList getPriceList() {
         return helper.getPriceList();
     }
 

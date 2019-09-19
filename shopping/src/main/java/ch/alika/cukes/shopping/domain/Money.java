@@ -4,6 +4,8 @@ import lombok.Value;
 
 @Value
 public class Money {
+    public final static Money $0_00 = new Money();
+
     private final int dollars;
     private final int cents;
 
