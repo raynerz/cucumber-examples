@@ -1,10 +1,11 @@
 package ch.alika.cukes.shopping.steps;
 
 import ch.alika.cukes.shopping.domain.IPriceList;
-import ch.alika.cukes.shopping.domain.Money;
-import ch.alika.cukes.shopping.domain.PriceList;
+import ch.alika.cukes.shopping.support.ProductPrice;
 import ch.alika.cukes.shopping.support.ShoppingHelper;
 import cucumber.api.java.en.Given;
+
+import java.util.List;
 
 
 public class PriceListSteps {
@@ -15,10 +16,11 @@ public class PriceListSteps {
         this.helper = helper;
     }
 
-    @Given("the price of a {string} is {money}")
-    public void thePriceOfAIs(String itemName, Money itemPrice) {
-        getPriceList().putPrice(itemName,itemPrice);
+    @Given("the product prices are:")
+    public void theProductPricesAre(List<ProductPrice> prices) {
+       prices.forEach(i -> getPriceList().putPrice(i.getProductName(),i.getPrice()));
     }
+
 
     private IPriceList getPriceList() {
         return helper.getPriceList();
