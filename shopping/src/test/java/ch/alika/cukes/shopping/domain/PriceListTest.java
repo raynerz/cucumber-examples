@@ -23,13 +23,13 @@ class PriceListTest {
     }
 
     @Test
-    void wherePricingFunctionIsApplied() {
+    void wherePriceRetrievedForKnownProducts() {
         assertThat(priceList.getPrice(BANANA),is(BANANA_PRICE));
         assertThat(priceList.getPrice(ORANGE),is(ORANGE_PRICE));
     }
 
     @Test
-    void wherePriceIsUnknown() {
+    void wherePriceRetreivedForUnknownProduct() {
         assertThrows(PriceUnknownException.class, () -> priceList.getPrice("Nonexistent_product"));
     }
 }
