@@ -1,10 +1,10 @@
 package ch.alika.cukes.shopping.domain;
 
 public class ShoppingCart implements IShoppingCart {
-    private final PricingFunction pricingFunction;
+    private final IPricingFunction pricingFunction;
     private Money totalPrice = new Money();
 
-    public ShoppingCart(PricingFunction pricingFunction) {
+    public ShoppingCart(IPricingFunction pricingFunction) {
         this.pricingFunction = pricingFunction;
     }
 
