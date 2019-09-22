@@ -1,4 +1,8 @@
-Feature: Add to Cart
+Feature: Shopping Cart Price Total
+
+  Shopper would like to know the total cost of the
+  contents in their shopping cart as they shop so
+  they can predict and control their spending
 
   Background:
     Given the product prices are:
