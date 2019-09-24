@@ -18,3 +18,7 @@ Feature: Shopping Cart Price Total
     When I add 1 "banana" to my cart
     And I add 2 "orange"s to my cart
     Then the total price should be $3.80
+
+  Scenario: Add Item With No Price
+    Then add item to my cart should fail
+    When I add 1 "kiwi" to my cart
