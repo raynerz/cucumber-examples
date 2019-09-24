@@ -36,11 +36,6 @@ public class Money {
         return new Money( 0, totalCents);
     }
 
-    Money minus(Money other) {
-        int totalCents = (getValueInCents())  - (other.getValueInCents());
-        return new Money( 0, totalCents);
-    }
-
     private int getValueInCents() {
         return this.dollars * 100 + this.cents;
     }
