@@ -6,8 +6,13 @@ import ch.alika.cukes.shopping.domain.PriceList;
 import ch.alika.cukes.shopping.domain.ShoppingCart;
 
 public class ShoppingHelper {
-    private final IPriceList priceList = new PriceList();
-    private final IShoppingCart cart = new ShoppingCart(priceList::getPrice);
+    private final IPriceList priceList;
+    private final IShoppingCart cart;
+
+    public ShoppingHelper() {
+        priceList = new PriceList();
+        cart = new ShoppingCart(priceList::getPrice);
+    }
 
     public IPriceList getPriceList() {
         return priceList;

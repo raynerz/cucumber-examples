@@ -1,16 +1,19 @@
 package ch.alika.cukes.shopping;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.SnippetType;
-import cucumber.api.junit.Cucumber;
-import org.junit.jupiter.api.DisplayName;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+
+import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
         tags = {"not @pending"},
         plugin = {"pretty"},
         features = "classpath:features",
-        snippets = SnippetType.CAMELCASE)
+        strict = true,
+        snippets = CAMELCASE)
 public class RunDoneCucumberTest {
+
 }

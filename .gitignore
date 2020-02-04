@@ -1,3 +1,15 @@
 
 .idea/*
 */*.iml
+
+shopping/.settings/
+
+shopping/.project
+
+shopping/.factorypath
+
+shopping/.classpath
+
+.settings/
+
+.project
