@@ -6,10 +6,12 @@ import ch.alika.cukes.shopping.support.ProductPrice;
 import ch.alika.cukes.shopping.support.ShoppingHelper;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 import java.util.Map;
 
+@SpringBootTest(classes = ShoppingStepsSpringConfiguration.class)
 public class PriceListSteps {
 
     final private ShoppingHelper helper;
