@@ -4,7 +4,6 @@ import ch.alika.cukes.shopping.domain.IShoppingCart;
 import ch.alika.cukes.shopping.domain.Money;
 import ch.alika.cukes.shopping.domain.PriceUnknownException;
 import ch.alika.cukes.shopping.support.ShoppingHelper;
-import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -38,11 +37,6 @@ public class ShoppingCartSteps {
     @Then("add item to my cart should fail")
     public void addItemToMyCartShouldFail() {
         addItemToCartExpectedToFail = true;
-    }
-
-    @ParameterType("\\$(\\d+\\.\\d+)")
-    public Money money(String amount) {
-        return Money.fromString(amount);
     }
 
     private IShoppingCart getCart() {

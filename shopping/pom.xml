@@ -89,6 +89,18 @@
             <version>${de.monochromata.cucumber}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>5.4.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>5.4.1</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
